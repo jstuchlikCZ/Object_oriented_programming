@@ -5,7 +5,7 @@ Create an Airplane class. Implement the following using the operator overloading
 Check if the airplane types are equal (the == operator);
 Increasing and decreasing the number of passengers in the cabin (the operators: + - + = - =);
 Compare two airplanes for the maximum possible number of passengers on board (the operators: > < <= >=).
-"""
+
 
 class Airplane:
     def __init__(self, A_type, max_pas, cur_pas):
@@ -77,11 +77,42 @@ print(plane1 < plane2)  # True
 print(plane1 >= plane3)  # True
 print(plane1 <= plane2)  # True
 
-
+"""
 # Řešení od pana Čepana
 
+class Airplane:
+    def __init__(self, name, passengers):
+        self.name = name
+        self.passengers = passengers
+
+    def __str__(self):
+        return f"Airplane: {self.name} - capacity {self.passengers}"
+
+    def __eq__(self, o):
+        return self.passengers == o.passengers and self.name == o.name
+
+    def __lt__(self, o):
+        return self.passengers < o.passengers
+
+    def __gt__(self, o):
+        return self.passengers > o.passengers
+
+    def __add__(self, o):
+        return self.passengers + o.passengers # součet hodnot
 
 
+if __name__ == "__main__":
+    a1 = Airplane("plane 1", 100)
+    a2 = Airplane("plane 1", 100)
+    a3 = Airplane("plane 1", 250)
+    print(a1)
+    print(a2)
+    print(a3)
+
+    print(a1 == a2)
+    print(a3 < a2)
+
+    print(a1 + a2)
 
 
 

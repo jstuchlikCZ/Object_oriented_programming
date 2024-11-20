@@ -6,7 +6,7 @@ h1 = provedení
 
 
 TASK1
-
+"""
 
 class Human:
     name = "Jan"
@@ -39,7 +39,7 @@ h1.say_hello()
 
 
 
-
+"""
 TASK 2
 Create a class City. Class fields should store the following: 
 city name, region name, country name, number of citizens, zip code, area code. 
@@ -108,10 +108,3 @@ class capital:
 z1.zeme()
 
 
-"""
-Task 4
-Create a class Fraction. Class fields should store the following: 
-numerator and denominator. Implement class methods for data input and output, 
-provide access to individual fields through class methods. 
-Also, create class methods for arithmetic operations (add, subtract, multiply, divide, etc.).
-"""
